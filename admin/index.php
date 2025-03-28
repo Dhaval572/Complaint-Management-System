@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
 				<h3><i class="bi bi-person-fill me-2"></i>Admin Sign In</h3>
 			</div>
 
-			<form method="post">
+			<form method="post" autocomplete="off">
 				<?php if ($_SESSION['errmsg']): ?>
 					<div class="error-message">
 						<?php
@@ -79,10 +79,10 @@ if (isset($_POST['submit'])) {
 				<?php endif; ?>
 
 				<input type="text" class="form-control" id="inputEmail" name="username"
-					placeholder="Username" required autofocus>
+					placeholder="Username" required autofocus autocomplete="off">
 
 				<input type="password" class="form-control" id="inputPassword" name="password"
-					placeholder="Password" required>
+					placeholder="Password" required autocomplete="off">
 
 				<button type="submit" class="btn btn-theme btn-lg w-100" name="submit">
 					<i class="bi bi-box-arrow-in-right me-2"></i>Login
