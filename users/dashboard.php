@@ -1,16 +1,15 @@
 <?php
 
-session_start();
-error_reporting(0);
+	session_start();
+	error_reporting(0);
 
-include('includes/config.php');
+	include('includes/config.php');
 
-if (strlen($_SESSION['login']) == 0) {
-	header('location:index.php');
-} else {
-
+	if (strlen($_SESSION['login']) == 0) {
+		header('location:index.php');
+	} else { 
+	
 ?>
-
 	<!DOCTYPE html>
 	<html lang="en">
 
@@ -60,38 +59,38 @@ if (strlen($_SESSION['login']) == 0) {
 									$rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where userId='" . $_SESSION['id'] . "' and status is null");
 									$num1 = mysqli_num_rows($rt); { ?>
 										<h3><?php echo htmlentities($num1); ?></h3>
+									</div>
+									<p><?php echo htmlentities($num1); ?> Complaints not Process yet</p>
 								</div>
-								<p><?php echo htmlentities($num1); ?> Complaints not Process yet</p>
-							</div>
-						<?php } ?>
+							<?php } ?>
 
 
-						<div class="col-md-2 col-sm-2 box0">
-							<div class="box1">
-								<span class="li_news"></span>
-								<?php
-								$status = "in Process";
-								$rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where userId='" . $_SESSION['id'] . "' and  status='$status'");
-								$num1 = mysqli_num_rows($rt); { ?>
-									<h3><?php echo htmlentities($num1); ?></h3>
-							</div>
-							<p><?php echo htmlentities($num1); ?> Complaints Status in process</p>
-						</div>
-					<?php } ?>
+							<div class="col-md-2 col-sm-2 box0">
+								<div class="box1">
+									<span class="li_news"></span>
+									<?php
+									$status = "in Process";
+									$rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where userId='" . $_SESSION['id'] . "' and  status='$status'");
+									$num1 = mysqli_num_rows($rt); { ?>
+										<h3><?php echo htmlentities($num1); ?></h3>
+									</div>
+									<p><?php echo htmlentities($num1); ?> Complaints Status in process</p>
+								</div>
+							<?php } ?>
 
-					<div class="col-md-2 col-sm-2 box0">
-						<div class="box1">
-							<span class="li_news"></span>
-							<?php
-							$status = "closed";
-							$rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where userId='" . $_SESSION['id'] . "' and  status='$status'");
-							$num1 = mysqli_num_rows($rt); { ?>
-								<h3><?php echo htmlentities($num1); ?></h3>
-						</div>
-						<p><?php echo htmlentities($num1); ?> Complaint has been closed</p>
-					</div>
+							<div class="col-md-2 col-sm-2 box0">
+								<div class="box1">
+									<span class="li_news"></span>
+									<?php
+									$status = "closed";
+									$rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where userId='" . $_SESSION['id'] . "' and  status='$status'");
+									$num1 = mysqli_num_rows($rt); { ?>
+										<h3><?php echo htmlentities($num1); ?></h3>
+									</div>
+									<p><?php echo htmlentities($num1); ?> Complaint has been closed</p>
+								</div>
 
-				<?php } ?>
+							<?php } ?>
 						</div>
 				</section>
 			</section>

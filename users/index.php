@@ -118,7 +118,7 @@ if (isset($_POST['change'])) {
 			</button>
 
 			<div class="login-header">
-				<h2><i class="bi bi-lock-fill me-2"></i>Login</h2>
+				<h2><i clas s="bi bi-lock-fill me-2"></i>Login</h2>
 			</div>
 
 			<form name="login" method="post" autocomplete="off">
