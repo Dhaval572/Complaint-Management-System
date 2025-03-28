@@ -56,31 +56,31 @@ if (isset($_POST['submit'])) {
 				<h2><i class="bi bi-person-plus-fill me-2"></i>User Registration</h2>
 			</div>
 
-			<form method="post">
-				<!-- PHP Success Message -->
+			<form method="post" autocomplete="off">
 				<?php if ($msg): ?>
 					<div class="alert alert-success mb-3">
 						<?php echo htmlentities($msg); ?>
 					</div>
 				<?php endif; ?>
 
-				<!-- PHP Error Message -->
 				<?php if ($errormsg): ?>
 					<div class="alert alert-danger">
 						<?php echo htmlentities($errormsg); ?>
 					</div>
 				<?php endif; ?>
 
-				<input type="text" class="form-control" placeholder="Full Name" name="fullname" required autofocus>
+				<input type="text" class="form-control" placeholder="Full Name" name="fullname" required autofocus
+					autocomplete="off">
 
-				<input type="email" class="form-control" placeholder="Email" id="email"
-					onBlur="userAvailability()" name="email" required>
+				<input type="email" class="form-control" placeholder="Email" id="email" onBlur="userAvailability()"
+					name="email" required autocomplete="off">
 				<span id="user-availability-status1"></span>
 
-				<input type="password" class="form-control" placeholder="Password" required name="password" maxlength="6">
+				<input type="password" class="form-control" placeholder="Password" required name="password"
+					maxlength="6" autocomplete="off">
 
-				<input type="text" class="form-control" maxlength="10" name="contactno"
-					placeholder="Contact No" required>
+				<input type="text" class="form-control" maxlength="10" name="contactno" placeholder="Contact No"
+					required autocomplete="off">
 
 				<button class="btn btn-theme btn-lg w-100 mb-3" type="submit" name="submit" id="submit">
 					<i class="bi bi-person-plus me-2"></i> Register
@@ -106,11 +106,11 @@ if (isset($_POST['submit'])) {
 				url: "check_availability.php",
 				data: 'email=' + $("#email").val(),
 				type: "POST",
-				success: function(data) {
+				success: function (data) {
 					$("#user-availability-status1").html(data);
 					$("#loaderIcon").hide();
 				},
-				error: function() {
+				error: function () {
 					$("#user-availability-status1").html("Error checking availability");
 					$("#loaderIcon").hide();
 				}

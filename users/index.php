@@ -121,7 +121,7 @@ if (isset($_POST['change'])) {
 				<h2><i class="bi bi-lock-fill me-2"></i>Login</h2>
 			</div>
 
-			<form name="login" method="post">
+			<form name="login" method="post" autocomplete="off">
 				<!-- PHP Error/Success Message Placeholders -->
 				<div id="message-container">
 					<?php if ($errormsg): ?>
@@ -134,15 +134,18 @@ if (isset($_POST['change'])) {
 				</div>
 
 				<div class="mb-3">
-					<input type="text" class="form-control" name="userEmail" placeholder="Email" required autofocus>
+					<input type="text" class="form-control" name="userEmail" placeholder="Email" required autofocus
+						autocomplete="off">
 				</div>
 
 				<div class="mb-3">
-					<input type="password" class="form-control" name="password" required placeholder="Password" maxlength="6">
+					<input type="password" class="form-control" name="password" required placeholder="Password"
+						maxlength="6" autocomplete="off">
 				</div>
 
 				<div class="forgot-password mb-3">
-					<a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" class="text-primary text-decoration-none">
+					<a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal"
+						class="text-primary text-decoration-none">
 						Forgot Password?
 					</a>
 				</div>
@@ -167,20 +170,24 @@ if (isset($_POST['change'])) {
 					<h5 class="modal-title">Forgot Password</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<form name="forgot" method="post" onsubmit="return valid();">
+				<form name="forgot" method="post" onsubmit="return valid();" autocomplete="off">
 					<div class="modal-body">
 						<p>Enter your details below to reset your password.</p>
 						<div class="mb-3">
-							<input type="email" name="email" placeholder="Email" class="form-control" required>
+							<input type="email" name="email" placeholder="Email" class="form-control" required
+								autocomplete="off">
 						</div>
 						<div class="mb-3">
-							<input type="text" name="contact" placeholder="Contact No" class="form-control" required>
+							<input type="text" name="contact" placeholder="Contact No" class="form-control" required
+								autocomplete="off">
 						</div>
 						<div class="mb-3">
-							<input type="password" class="form-control" placeholder="New Password" id="password" name="password" required maxlength="6">
+							<input type="password" class="form-control" placeholder="New Password" id="password"
+								name="password" required maxlength="6" autocomplete="off">
 						</div>
 						<div class="mb-3">
-							<input type="password" class="form-control" placeholder="Confirm Password" id="confirmpassword" name="confirmpassword" required maxlength="6">
+							<input type="password" class="form-control" placeholder="Confirm Password"
+								id="confirmpassword" name="confirmpassword" required maxlength="6" autocomplete="off">
 						</div>
 					</div>
 					<div class="modal-footer">
