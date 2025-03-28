@@ -1,0 +1,80 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #ff3a3a 0%, #ff6b3a 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 600;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.login-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h3 {
+    color: #ff3a3a;
+    font-weight: 700;
+}
+
+.form-control {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.btn-theme {
+    background: linear-gradient(135deg, #ff3a3a 0%, #ff6b3a 100%);
+    color: white;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-theme:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.error-message {
+    color: #ff3a3a;
+    margin-bottom: 1rem;
+    text-align: center;
+}
